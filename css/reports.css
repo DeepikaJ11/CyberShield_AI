@@ -1,0 +1,244 @@
+/* General Layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+      /* position: fixed;  */
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+     position: fixed;   /* ✅ keeps sidebar fixed */
+    top: 0;
+    left: 0;
+    height: 100vh;     /* full screen height */
+   
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-menu li.active,
+.nav-menu li:hover {
+    background: #334155; /* Slightly lighter dark */
+}
+
+.nav-menu li.active a,
+.nav-menu li:hover a {
+    color: #60a5fa; /* Blue-ish text on hover/active */
+}
+
+.nav-menu i {
+    margin-right: 10px;
+}
+
+.nav-menu li#logoutBtn:hover {
+    color: #f87171; /* light red hover for logout */
+}
+
+/* Main content */
+.main-content {
+      flex: 1;
+    padding: 30px;
+    background: #f9fafb;
+
+     margin-left: 250px;
+}
+
+.main-content h1 {
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Reports Table */
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.report-table th, .report-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.report-table th {
+    background: #1e293b;
+    color: white;
+}
+
+.report-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.report-table tr:hover {
+    background: #e2e8f0;
+}
+
+.high {
+    color: red;
+    font-weight: bold;
+}
+
+.medium {
+    color: orange;
+    font-weight: bold;
+}
+
+.low {
+    color: green;
+    font-weight: bold;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .report-table, .report-table th, .report-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .report-table tr {
+        margin-bottom: 15px;
+        display: block;
+    }
+    
+    .report-table th {
+        display: none;
+    }
+    
+    .report-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .report-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 10px 0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nav-menu li i {
+    margin-right: 8px;
+}
+
+/* Default links */
+.nav-menu a {
+    text-decoration: none;
+    color: white;   /* always white by default */
+    flex: 1;
+}
+
+/* Active link */
+.nav-menu li.active {
+    background: #334155;
+}
+
+.nav-menu li.active a {
+    color: #60a5fa;  /* blue text for active */
+}
+
+/* Hover effect (only background, not text) */
+.nav-menu li:hover {
+    background: #334155;
+}
+
+.nav-menu li:hover a {
+    color: white;   /* stay white, no color change */
+}
+
+/* Logout Button */
+#logoutBtn {
+    color: white;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+#logoutBtn:hover {
+    color: #f87171; /* red hover only for logout */
+}
+/* Active and Hover States */
+.nav-menu li.active,
+.nav-menu li:hover {
+    background: #334155; /* same bg as dashboard */
+}
+
+/* Text + Icon color when active/hover */
+.nav-menu li.active a,
+.nav-menu li.active i,
+.nav-menu li:hover a,
+.nav-menu li:hover i {
+    color: #60a5fa;  /* blue for active */
+}
+

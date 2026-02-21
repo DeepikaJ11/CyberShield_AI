@@ -1,0 +1,153 @@
+/* General Layout */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+    /* position: fixed;  */
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+   position: fixed;   /* ✅ keeps sidebar fixed */
+    top: 0;
+    left: 0;
+    height: 100vh;     /* full screen height */
+   
+}
+
+.sidebar h2 {
+   margin-bottom: 30px;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Navigation */
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.nav-menu li {
+  margin: 15px 0;
+  padding:10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+  transition: background 0.3s;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  flex: 1;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu i {
+  margin-right: 10px;
+}
+
+/* Active + Hover */
+.nav-menu li.active,
+.nav-menu li:hover {
+  background: #334155;
+}
+
+.nav-menu li.active a,
+.nav-menu li.active i,
+.nav-menu li:hover a,
+.nav-menu li:hover i {
+  color: #60a5fa;
+}
+
+/* Logout Button */
+#logoutBtn {
+  font-weight: bold;
+  transition: color 0.2s;
+}
+#logoutBtn:hover {
+  color: #f87171;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background: #f9fafb;
+
+     margin-left: 250px;
+}
+
+.main-content h1 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.sub-heading {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Reviews Table (same as Reports) */
+.review-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.review-table th,
+.review-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.review-table th {
+  background: #1e293b;
+  color: white;
+}
+
+.review-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.review-table tr:hover {
+  background: #e2e8f0;
+}
+
+/* Sentiment Colors */
+.positive {
+  color: green;
+  font-weight: bold;
+}
+
+.negative {
+  color: red;
+  font-weight: bold;
+}
+
+.neutral {
+  color: gray;
+  font-weight: bold;
+}
+

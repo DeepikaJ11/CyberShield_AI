@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reviews – BullyBlock AI</title>
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>BullyBlock AI</h2>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+                <li><a href="reports.html"><i class="fa-solid fa-flag"></i> Reports</a></li>
+                <li class="active"><a href="reviews.html"><i class="fa-solid fa-pen"></i> Reviews</a></li>
+                 <li><a href="graph.html"><i class="fa-solid fa-chart-pie"></i> Graph</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                <li id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Reviews</h1>
+            <p class="sub-heading">View submitted reviews with sentiment analysis</p>
+
+            <table class="review-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Bully Message</th>
+                        <th>Review</th>
+                        <th>Sentiment</th>
+                        <th>Sentiment Score</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody id="reviewsTableBody">
+                    <!-- Filled dynamically by reviews.js -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script type="module" src="reviews.js"></script>
+</body>
+</html>

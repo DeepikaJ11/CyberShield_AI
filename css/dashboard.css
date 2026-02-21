@@ -1,0 +1,189 @@
+/* ---------------- General Layout ---------------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ---------------- Dashboard Container ---------------- */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* ---------------- Sidebar ---------------- */
+.sidebar {
+    width: 220px;
+    background: #1e293b; /* Dark slate */
+    color: white;
+    padding: 20px;
+
+    position: fixed;   /* ✅ keeps sidebar fixed */
+    top: 0;
+    left: 0;
+    height: 100vh;     /* full screen height */
+   
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-menu li i {
+    margin-right: 8px;
+}
+
+/* Active and Hover Effects */
+.nav-menu li.active,
+.nav-menu li:hover {
+    background: #334155; /* Slightly lighter dark */
+}
+
+.nav-menu li.active a,
+.nav-menu li:hover a {
+    color: #60a5fa; /* Blue-ish text on hover/active */
+}
+
+/* Links inside sidebar */
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    flex: 1;
+}
+
+/* Logout Button Specific */
+#logoutBtn {
+    color: white;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+#logoutBtn:hover {
+    color: #f87171; /* Light red hover */
+}
+
+/* ---------------- Main Content ---------------- */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background: #f9fafb;
+
+     margin-left: 250px;  /* ✅ pushes content to the right */
+    /* flex: 1;
+    padding: 30px;
+    background: #f9fafb; */
+}
+
+.main-content h1 {
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* ---------------- Stats Cards ---------------- */
+.stats-cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card .value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ---------------- Reports Table ---------------- */
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.report-table th,
+.report-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.report-table th {
+    background: #1e293b;
+    color: white;
+}
+
+.report-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* Severity Colors */
+.high {
+    color: red;
+    font-weight: bold;
+}
+
+.medium {
+    color: orange;
+    font-weight: bold;
+}
+
+/* ---------------- Settings ---------------- */
+.settings-list {
+    list-style: none;
+    padding: 0;
+}
+
+.settings-list li {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.settings-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+

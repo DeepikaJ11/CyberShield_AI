@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings – BullyBlock AI</title>
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>BullyBlock AI</h2>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+                <li><a href="reports.html"><i class="fa-solid fa-flag"></i> Reports</a></li>
+                  <li><a href="reviews.html"><i class="fa-solid fa-pen"></i> Reviews</a></li> <!-- ✅ New Reviews link -->
+                   <li><a href="graph.html"><i class="fa-solid fa-chart-pie"></i> Graph</a></li>
+                <li class="active"><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                <li id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Settings</h1>
+            <p class="sub-heading">Manage your account and preferences</p>
+            <ul class="settings-list">
+                <li id="changePasswordBtn">Change Password</li>
+            </ul>
+
+            <!-- Password Change Form -->
+            <div class="password-form" id="passwordForm">
+                <h3>Change Password</h3>
+                <form>
+                    <label for="oldPassword">Old Password</label>
+                    <input type="password" id="oldPassword" placeholder="Enter old password" required>
+
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" placeholder="Enter new password" required>
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm new password" required>
+
+                    <button type="submit">Update Password</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Show/Hide password form on click
+        document.getElementById("changePasswordBtn").addEventListener("click", function() {
+            const form = document.getElementById("passwordForm");
+            form.style.display = form.style.display === "block" ? "none" : "block";
+        });
+    </script>
+</body>
+</html>

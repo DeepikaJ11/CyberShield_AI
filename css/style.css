@@ -1,0 +1,168 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Login container */
+.login-container {
+    background-color:#272727;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Login icon */
+.login-icon {
+    color: #009688;
+    margin-bottom: 20px;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 30px;
+    color: #fcfbfb;
+}
+
+/* Input group styling */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    position: relative;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group:hover {
+    border-color: #009688;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon inside input */
+.input-group i {
+    color: #888;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Input fields */
+.input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    flex: 1;
+}
+
+/* Password toggle icon */
+.password-group i#togglePassword {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    color: #888;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00796b;
+}
+
+/* Register text (below login button) */
+.register-text {
+    margin-top: 15px;   /* spacing from login button */
+    font-size: 13px;    /* smaller text */
+    color: #444;        /* softer gray */
+}
+
+.register-text a {
+    color: #009688;     /* theme color */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+/* Footer text */
+.footer-text {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Fullscreen overlay */
+#spinner-overlay {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+  backdrop-filter: blur(5px); /* blur effect */
+  z-index: 9999; /* on top of everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Spinner Cube Grid (same as before) */
+.sk-cube-grid {
+  width: 60px;
+  height: 60px;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #3498db;
+  float: left;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+.sk-cube-grid .sk-cube1 { animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 { animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 { animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 { animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 { animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 { animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 { animation-delay: 0s;   }
+.sk-cube-grid .sk-cube8 { animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 { animation-delay: 0.2s; }
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% { transform: scale3D(1, 1, 1); }
+  35% { transform: scale3D(0, 0, 1); }
+}
+

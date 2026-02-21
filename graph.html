@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BullyBlock AI – Graph</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    h1, .sub-heading {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Layout for charts */
+    .charts-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .chart-card {
+      flex: 1 1 400px;
+      max-width: 500px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .chart-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>BullyBlock AI</h2>
+      <ul class="nav-menu">
+        <li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+        <li><a href="reports.html"><i class="fa-solid fa-flag"></i> Reports</a></li>
+        <li><a href="reviews.html"><i class="fa-solid fa-pen"></i> Reviews</a></li>
+        <li class="active"><a href="graph.html"><i class="fa-solid fa-chart-pie"></i> Graph</a></li>
+        <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+        <li id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>Sentiment Analysis Graphs</h1>
+      <p class="sub-heading">Visual overview of Positive, Negative, and Neutral reviews</p>
+
+      <div class="charts-wrapper">
+        <!-- Pie/Doughnut Chart -->
+        <div class="chart-card">
+          <canvas id="sentimentChart"></canvas>
+        </div>
+
+        <!-- Line Chart -->
+        <div class="chart-card">
+          <canvas id="timelineChart"></canvas>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="graph.js"></script>
+</body>
+</html>
